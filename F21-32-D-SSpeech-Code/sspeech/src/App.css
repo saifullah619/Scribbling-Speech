@@ -1,0 +1,239 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#myProgress {
+  background-color: #ddd;
+  margin-left: 250px;
+  border-radius: 50px;
+  margin-right: 250px;
+}
+
+.center {
+  margin: auto;
+  width: 30%;
+  padding: 10px;
+}
+
+#myBar {
+  width: 1%;
+  height: 10px;
+  margin-top: 140px;
+  border-radius: 50px;
+  background-color: #3e04aa;
+}
+
+#button {
+  width:100%;
+  display:block;
+}
+
+#login {
+  display: block;
+}
+
+#signup {
+  display: block;
+}
+
+.logincomp {
+  background-color: seashell;
+  height: 700px;
+}
+
+.signupcomp {
+  background-color: seashell;
+}
+
+.flex-child {
+  flex: 1;
+}  
+
+.register {
+  display: flex;
+  margin: 32px auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  padding: 16px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.flex-child {
+  flex: 1;
+}  
+
+.logout_ {
+  margin-top: 13.25em;
+  align-items: center;
+  display: flex;
+  max-width: 960px;
+  flex-direction: column;
+}
+
+
+.logout_inside1 {
+  margin-bottom: 1em;
+}
+
+.logout_inside2 {
+  margin-bottom: 1.5em;
+}
+
+.logout_inside3 {
+  margin-bottom: 0.5em;
+}
+
+.logoutcomp {
+  display: flex;
+  max-width: 960px;
+  /* flex-direction: column; */
+  align-items: center;
+}
+
+.menu {
+
+}
+
+#logout {
+  display: none;
+}
+
+#nothiddenLogin {
+  margin-top: 140px;
+}
+
+.storeheading {
+  margin-bottom: -3em;
+}
+
+.home {
+  display: flex;
+  margin: 32px auto 32px;
+  padding: 0 16px;
+  max-width: 960px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profilepic {
+  border-radius: 50%;
+}
+
+#loginerror1 {
+  display: none;
+  font-size: large;
+}
+
+#selection {
+  margin-top: 1em;
+  width: 50%;
+}
+
+#submit_selection {
+  margin-top: 1em;
+}
+
+.buttonConfirm {
+  margin-top: 1em;
+}
+
+.link:link, .link:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1.2em;
+}
+
+.link:hover, .link:active {
+  background-color: red;
+}
+
+#loginerror2 {
+  display: none;
+  font-size: large;
+}
+
+#signuperror {
+	display: none;
+	font-size: large;
+}
+  
+.forminput {
+  width: 25em;
+}
+
+.submitButton {
+  margin-top: 2em;
+}
+
+.intermediate {
+  margin-top: 1em;
+}
+
+.float-child {
+  width: 50%;
+  float: left;
+  padding: 30px;
+}  
+
+.flex-container {
+  display: flex;
+}
+
+.footer {
+  background-color: darkolivegreen;
+}
+
+.lnk {
+  color: white;
+}
+
+.txt {
+  text-emphasis-color: white;
+}

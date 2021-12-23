@@ -1,0 +1,13 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+
+#clearBtn {
+  margin-top: 30px;
+  margin-left: 500px;
+  width: 40%;
+}
