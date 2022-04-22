@@ -1,0 +1,50 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+  border-style: solid;
+  margin: 0.4em;
+}
+.vertical {
+  border-left: 3px solid black;
+  height: 605px;
+  position: absolute;
+  left: 20%;
+}
+.control {
+  top: 2%;
+  left: 13%;
+  position: absolute;
+}
+.control2 {
+  top: 9%;
+  left: 13%;
+  position: absolute;
+}
+.button {
+  background-color: #FF0000;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: lightblue;
+  border: none;
+  color: black;
+  padding: 10px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

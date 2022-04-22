@@ -89,6 +89,13 @@ function draw() {
     }
     x += currentStroke.dx;
     y += currentStroke.dy;
+
+    console.log("Current Stroke X: ", currentStroke.dx);
+    console.log("Current Stroke Y: ", currentStroke.dy);
+
+    console.log("X: ", x);
+    console.log("Y: ", y);
+    
     nextPen = currentStroke.pen;
     currentStroke = null;
     sketchRNN.generate(gotStrokePath);

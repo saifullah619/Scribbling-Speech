@@ -3,14 +3,16 @@ import { useEffect, useState } from 'react';
 import icon from './pencil.png'
 import Sketch from "react-p5";
 import './App.css';
+import $ from 'jquery';
 import axios from 'axios';
 import User from './User';
-import slider from './sunset.jpg';
-import slider2 from './afternoon.jpg';
+import slider from './ss1.jpeg';
+import slider2 from './ss2.jpeg';
 import ppic from './image.jpg';
-import slider3 from './evening.jpg';
+import slider3 from './ss3.jpeg';
 import Loading from './Loading.js';
 import loginPic from './login_pic.png';
+import Dictaphone from './Dictaphone.js';
 
 function App() {
 	const [done, setDone] = useState(undefined);
@@ -34,6 +36,10 @@ function App() {
 						<Route path="/autocomplete" element={<AutoComplete />} />
 						<Route path="/logout" element={<Logout />} />
 						<Route path="/predicter" element={<Predicter />} />
+						<Route path="/watch" element={<Watch />} />
+						<Route path="/teaching" element={<TeachingMode />} />
+						<Route path="/animate" element={<Animate />} />
+						<Route path="/create" element={<Create />} />
 					</Routes>
 				</Router>
 				<Footer />
@@ -87,19 +93,11 @@ function AutoComplete() {
 					<option value={"bicycle"}>Bicycle</option>
 					<option value={"brain"}>Brain</option>
 					<option value={"cat"}>Cat</option>
-					<option value={"chair"}>
-						Chair
-					</option>
+					<option value={"chair"}>Chair</option>
 					<option value={"couch"}>Couch</option>
-					<option value={"alarm_clock"}>
-						Clock
-					</option>
-					<option value={"dog"}>
-						Dog
-					</option>
-					<option value={"eye"}>
-						Eye
-					</option>
+					<option value={"alarm_clock"}>Clock</option>
+					<option value={"dog"}>Dog</option>
+					<option value={"eye"}>Eye</option>
 					<option value={"face"}>
 						Face
 					</option>
@@ -202,6 +200,80 @@ function AutoComplete() {
             </div>
         </div>
     )
+}
+
+function Watch() {
+	return (
+		<div>
+			<ImageSlider />
+			<div className="home">
+				<h1>Watch Animations!</h1>
+				<h4>Watch any predefined animation</h4>
+				<ol>
+					<li>Click on the "Go to Canvas" Button.</li>
+					<li>Once there, click on the "Choose Files" button and select any recording you want to view.</li>
+					<li>Enjoy &#128512;</li>
+				</ol>
+				<a className="link" target="_blank" href={process.env.PUBLIC_URL + "Watch/index.html"}> Go to Canvas</a> 
+			</div>
+		</div>
+	);		
+}
+
+function TeachingMode() {
+	return (
+		<div>
+			<ImageSlider />
+			<div className="home">
+				<h1>Teaching/Learning Mode!</h1>
+				<h4>Teach and learn how to draw, new and old!</h4>
+				<ol>
+					<li>Click on the "Go to Canvas" Button.</li>
+					<li>Once there, you will see a canvas to draw and a panel on the left side to Save, Watch and Learn.</li>
+					<li>Happy Teaching and Learning! &#128512;</li>
+				</ol>
+				<a className="link" target="_blank" href={process.env.PUBLIC_URL + "Teaching Mode/index.html"}> Go to Canvas</a> 
+			</div>
+		</div>
+	);
+}
+
+function Animate() {
+	return (
+		<div>
+			<ImageSlider />
+			<div className="home">
+				<h1>Animate Drawings!</h1>
+				<h4>Animate a drawing based on your Speech Input!</h4>
+				<ol>
+					<li>Click on the "Start" Button to start Recording. Begin speaking to capture input.</li>
+					<li>Click on the "Stop" Button to stop Recording. If you stop speaking input will automatically be saved.</li>
+					<li>Click on the "Reset" Button to reset the input.</li>
+					<li>As soon as you click on "Stop" Button you will be prompted to save your input.</li>
+				</ol>
+				<Dictaphone />
+			</div>
+		</div>
+	);
+}
+
+
+function Create() {
+	return (
+		<div>
+			<ImageSlider />
+			<div className="home">
+				<h1>Create Drawings!</h1>
+				<h4>Create a drawing based on your Speech Input!</h4>
+				<ol>
+					<li>Click on the "Start" Button to start Recording. Begin speaking to capture input.</li>
+					<li>Click on the "Stop" Button to stop Recording. If you stop speaking input will automatically be saved.</li>
+					<li>Click on the "Reset" Button to reset the input.</li>
+				</ol>
+				<Dictaphone />
+			</div>
+		</div>
+	);
 }
 
 function Predicter() {
@@ -446,6 +518,21 @@ function Navbar() {
 					<li className="nav-item">
 						<Link className="nav-link" to="/autocomplete">Auto Complete</Link>
 					</li>
+					<li className="nav-item">
+						<Link className="nav-link" to="/watch">Watch</Link>
+					</li>
+					<li className="nav-item">
+						<Link className="nav-link" to="/teaching">Teach</Link>
+					</li>
+					<li className="nav-item">
+						<Link className="nav-link" to="/teaching">Learn</Link>
+					</li>
+					<li className="nav-item">
+						<Link className="nav-link" to="/create">Create</Link>
+					</li>
+					<li className="nav-item">
+						<Link className="nav-link" to="/animate">Animate</Link>
+					</li>
 				</ul>
 				<div id="logout">
 					<ul className="navbar-nav ml-auto">
@@ -463,10 +550,10 @@ function Navbar() {
 }
 
 function ImageSlider() {
-    return (
+	return (
         <div>
             <div className="Slider">
-                <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+                <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-interval="2000">
                     <ol className="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -503,7 +590,7 @@ function Footer() {
         <div>
             <footer id="foot" className="page-footer font-small blue">
                 <div className="footer">
-                    <div className="footer-copyright text-center py-3">© 2021 Scribbling Speech: <a className="lnk" href="mailto:i180595@nu.edu.pk">Contact Us</a>
+                    <div className="footer-copyright text-center py-3">© 2022 Scribbling Speech: <a className="lnk" href="mailto:i180595@nu.edu.pk">Contact Us</a>
                     </div>
                 </div>
             </footer>
